@@ -1,4 +1,3 @@
-// ТВОЙ МАССИВ С ФОТО
 const photos = [
     "../photos/32.jpg",
     "../photos/33.png",
@@ -10,15 +9,12 @@ const photos = [
     "../photos/Twilight Breeze.jpg"
 ];
 
-// Элементы для счётчика
 const currentSlideSpan = document.getElementById('currentSlide');
 const totalSlidesSpan = document.getElementById('totalSlides');
 totalSlidesSpan.textContent = photos.length;
 
-// Контейнер для слайдов
 const wrapper = document.getElementById('swiperWrapper');
 
-// СОЗДАЁМ СЛАЙДЫ ИЗ ТВОИХ ФОТО
 photos.forEach((photo, index) => {
     const slide = document.createElement('div');
     slide.className = 'swiper-slide';
@@ -32,7 +28,6 @@ photos.forEach((photo, index) => {
     wrapper.appendChild(slide);
 });
 
-// ИНИЦИАЛИЗАЦИЯ SWIPER
 const swiper = new Swiper('.mySwiper', {
     // Базовые параметры
     loop: true,
@@ -49,7 +44,7 @@ const swiper = new Swiper('.mySwiper', {
         prevEl: '.swiper-button-prev',
     },
 
-    // Пагинация (точки)
+    // Пагинация
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -62,7 +57,7 @@ const swiper = new Swiper('.mySwiper', {
         enabled: true,
     },
 
-    // Событие при смене слайда — обновляем счётчик
+    // Событие при смене слайда
     on: {
         slideChange: function () {
             const realIndex = this.realIndex + 1;
@@ -74,12 +69,10 @@ const swiper = new Swiper('.mySwiper', {
 // Начальный счётчик
 currentSlideSpan.textContent = 1;
 
-// Лог в консоль
 console.log(`✅ Слайдер Swiper загружен! Всего фото: ${photos.length}`);
 console.log('📸 Используй кнопки или стрелки клавиатуры ← →');
 console.log('🔄 Автопрокрутка каждые 4 секунды');
 
-// АНИМАЦИЯ ПОЯВЛЕНИЯ ЭЛЕМЕНТОВ
 document.addEventListener('DOMContentLoaded', function () {
     const elements = [
         document.querySelector('.card-title'),
