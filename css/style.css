@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 10px;
+    animation: fadeInDown 0.8s ease;
+}
+
+.header__subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    animation: fadeInUp 0.8s ease;
+}
+
+.main {
+    flex: 1;
+    padding: 60px 0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    animation: fadeIn 1s ease;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card__icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.card__description {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn--primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn--secondary {
+    background: #f0f0f0;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn--secondary:hover {
+    background: #667eea;
+    color: white;
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .cards-grid {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 0;
+    }
+    
+    .header__title {
+        font-size: 2rem;
+    }
+    
+    .header__subtitle {
+        font-size: 1rem;
+    }
+    
+    .main {
+        padding: 40px 0;
+    }
+    
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
+    
+    .card {
+        padding: 25px 15px;
+    }
+    
+    .card__title {
+        font-size: 1.3rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 15px 0;
+    }
+    
+    .header__title {
+        font-size: 1.6rem;
+    }
+    
+    .header__subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .main {
+        padding: 30px 0;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .card {
+        padding: 20px 15px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .header__title {
+        font-size: 1.3rem;
+    }
+    
+    .header__subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .main {
+        padding: 20px 0;
+    }
+    
+    .card {
+        padding: 16px 12px;
+    }
+    
+    .card__title {
+        font-size: 1.1rem;
+    }
+    
+    .card__description {
+        font-size: 0.85rem;
+    }
+    
+    .btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+}

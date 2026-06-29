@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Задание №1 - Дата рождения</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleTask1.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <h1 class="header__title">📚 Учебная практика №1</h1>
+                <p class="header__subtitle">Логинов Сергей Андреевич</p>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <div class="birthday-card">
+                    <h2 class="card-title">Выберите день, месяц и год рождения</h2>
+                    
+                    <div class="row-selectors">
+                        <div class="selector-group">
+                            <label>День</label>
+                            <select id="day" class="selector-input">
+                                <option value="">Выберите день</option>
+                            </select>
+                        </div>
+
+                        <div class="selector-group">
+                            <label>Месяц</label>
+                            <select id="month" class="selector-input">
+                                <option value="">Выберите месяц</option>
+                                <option value="1">Январь</option>
+                                <option value="2">Февраль</option>
+                                <option value="3">Март</option>
+                                <option value="4">Апрель</option>
+                                <option value="5">Май</option>
+                                <option value="6">Июнь</option>
+                                <option value="7">Июль</option>
+                                <option value="8">Август</option>
+                                <option value="9">Сентябрь</option>
+                                <option value="10">Октябрь</option>
+                                <option value="11">Ноябрь</option>
+                                <option value="12">Декабрь</option>
+                            </select>
+                        </div>
+
+                        <div class="selector-group">
+                            <label>Год</label>
+                            <select id="year" class="selector-input">
+                                <option value="">Выберите год</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary" id="checkBtn">Проверить дату</button>
+
+                    <div class="back-btn">
+                        <button onclick="window.location.href='../index.html'" class="btn btn--secondary">
+                            ← Вернуться на главную
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 Учебная практика №1 | Все права защищены</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/scriptTask1.js"></script>
+</body>
+</html>

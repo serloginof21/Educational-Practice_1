@@ -1,0 +1,233 @@
+.background-card {
+    background: white;
+    border-radius: 25px;
+    padding: 30px 35px 30px 35px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-title {
+    color: #667eea;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 3px;
+}
+
+/* Контейнер с фото */
+.slider-image-container {
+    margin: 0 auto 8px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    border-radius: 16px;
+    padding: 8px;
+    background: #f8f8ff;
+    border: 2px solid #e8e8f0;
+}
+
+/* Фото */
+.slider-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.slider-image.fade {
+    opacity: 0;
+}
+
+/* Кнопки навигации */
+.slider-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.slider-buttons .btn {
+    min-width: 140px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+.slider-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.35);
+}
+
+.slider-buttons .btn:active {
+    transform: scale(0.97);
+}
+
+.back-btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-btn .btn {
+    min-width: 200px;
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.back-btn .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.25);
+}
+
+@media (max-width: 768px) {
+    .background-card {
+        padding: 25px 22px 25px 22px;
+        max-width: 95%;
+        margin: 0 15px;
+        border-radius: 20px;
+    }
+    
+    .card-title {
+        font-size: 1.4rem;
+        margin-bottom: 14px;
+        padding-bottom: 8px;
+    }
+    
+    .card-title::after {
+        width: 40px;
+        height: 2px;
+    }
+    
+    .slider-image {
+        max-height: 320px;
+    }
+    
+    .slider-image-container {
+        padding: 6px;
+        border-radius: 14px;
+    }
+    
+    .slider-buttons .btn {
+        min-width: 120px;
+        padding: 10px 22px;
+        font-size: 0.9rem;
+    }
+    
+    .back-btn .btn {
+        min-width: 170px;
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .background-card {
+        padding: 18px 16px 20px 16px;
+        border-radius: 18px;
+        max-width: 100%;
+        margin: 0 10px;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+    }
+    
+    .card-title::after {
+        width: 35px;
+        height: 2px;
+    }
+    
+    .slider-image {
+        max-height: 250px;
+    }
+    
+    .slider-image-container {
+        padding: 5px;
+        border-radius: 12px;
+        border-width: 1.5px;
+    }
+    
+    .slider-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .slider-buttons .btn {
+        min-width: 100%;
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .back-btn {
+        margin-top: 16px;
+    }
+    
+    .back-btn .btn {
+        min-width: 100%;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .background-card {
+        padding: 12px 10px 14px 10px;
+        border-radius: 14px;
+        margin: 0 8px;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+    
+    .card-title::after {
+        width: 28px;
+        height: 2px;
+    }
+    
+    .slider-image {
+        max-height: 180px;
+    }
+    
+    .slider-image-container {
+        padding: 4px;
+        border-radius: 10px;
+    }
+    
+    .slider-buttons .btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}

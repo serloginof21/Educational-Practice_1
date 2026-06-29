@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание №2 - Простой слайдер изображений</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleTask2.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <h1 class="header__title">📚 Учебная практика №1</h1>
+                <p class="header__subtitle">Логинов Сергей Андреевич</p>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <div class="background-card">
+                    <h2 class="card-title" id="sliderTitle">Изображение 1 из 8</h2>
+
+                    <div class="slider-image-container">
+                        <img src="../photos/31.png" alt="слайд изображения" class="slider-image" id="sliderImage">
+                    </div>
+
+                    <div class="slider-buttons">
+                        <button class="btn btn--primary" id="prevBtn">← Назад</button>
+                        <button class="btn btn--primary" id="nextBtn">Вперёд →</button>
+                    </div>
+
+                    <div class="back-btn">
+                        <button onclick="window.location.href='../index.html'" class="btn btn--secondary">
+                            ← Вернуться на главную
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 Учебная практика №1 | Все права защищены</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="../js/scriptTask2.js"></script>
+</body>
+</html>
